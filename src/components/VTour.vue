@@ -100,6 +100,11 @@ export default {
       return this.steps.length
     }
   },
+  watch: {
+    name (newValue) {
+      this.$tours[newValue] = this
+    }
+  },
   methods: {
     start (startStep) {
       // Wait for the DOM to be loaded, then start the tour
