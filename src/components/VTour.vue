@@ -102,6 +102,7 @@ export default {
   },
   watch: {
     name (newValue) {
+      console.log(newValue)
       this.$tours[newValue] = this
     }
   },
