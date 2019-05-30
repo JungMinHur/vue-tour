@@ -123,7 +123,7 @@ export default {
     nextStep () {
       if (this.currentStep < this.numberOfSteps - 1 && this.currentStep !== -1) {
         this.customCallbacks.onNextStep(this.currentStep)
-        this.currentStep++
+        this.$nextTick(this.currentStep++)
       }
     },
     stop () {
