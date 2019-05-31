@@ -101,9 +101,12 @@ export default {
     }
   },
   watch: {
-    name (newValue) {
-      console.log(newValue)
-      this.$tours[newValue] = this
+    name: {
+      immediate: true,
+      handler (newValue) {
+        console.log(newValue)
+        this.$tours[newValue] = this
+      }
     }
   },
   methods: {
