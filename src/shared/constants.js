@@ -8,6 +8,7 @@ export const DEFAULT_CALLBACKS = {
 export const DEFAULT_OPTIONS = {
   useKeyboardNavigation: true,
   startTimeout: 0,
+  nextTimeout: 0,
   labels: {
     buttonSkip: 'Skip tour',
     buttonPrevious: 'Previous',
