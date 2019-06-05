@@ -125,8 +125,10 @@ export default {
     },
     nextStep () {
       if (this.currentStep < this.numberOfSteps - 1 && this.currentStep !== -1) {
+        setTimeout(() => {
         this.customCallbacks.onNextStep(this.currentStep)
-        this.$nextTick(this.currentStep++)
+        this.currentStep++
+      }, this.customOptions.nextTimeout)
       }
     },
     stop () {
