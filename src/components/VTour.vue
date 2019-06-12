@@ -71,6 +71,12 @@ export default {
       window.removeEventListener('keyup', this.handleKeyup)
     }
   },
+  watch: {
+    name(newValue) {
+      console.error('this is newValue', newValue)
+      this.$tour[newValue] = this
+    }
+  },
   computed: {
     // Allow us to define custom options and merge them with the default options.
     // Since options is a computed property, it is reactive and can be updated during runtime.
