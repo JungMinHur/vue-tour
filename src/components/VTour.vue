@@ -60,7 +60,6 @@ export default {
   },
   mounted () {
     this.$tours[this.name] = this
-
     if (this.customOptions.useKeyboardNavigation) {
       window.addEventListener('keyup', this.handleKeyup)
     }
@@ -101,12 +100,8 @@ export default {
     }
   },
   watch: {
-    name: {
-      immediate: true,
-      handler (newValue) {
-        console.log(newValue)
-        this.$tours[newValue] = this
-      }
+    name(newValue){
+      this.$tours[newValue] = this
     }
   },
   methods: {
@@ -126,9 +121,9 @@ export default {
     nextStep () {
       if (this.currentStep < this.numberOfSteps - 1 && this.currentStep !== -1) {
         setTimeout(() => {
-        this.customCallbacks.onNextStep(this.currentStep)
-        this.currentStep++
-      }, this.customOptions.nextTimeout)
+          this.customCallbacks.onNextStep(this.currentStep)
+          this.currentStep++
+          }, this.customOptions.nextTimeout)
       }
     },
     stop () {
