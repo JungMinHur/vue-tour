@@ -59,7 +59,7 @@ export default {
     }
   },
   mounted () {
-    this.$tours[this.name] = this
+    // this.$tours[this.name] = this
 
     if (this.customOptions.useKeyboardNavigation) {
       window.addEventListener('keyup', this.handleKeyup)
