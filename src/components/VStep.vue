@@ -97,7 +97,7 @@ export default {
         /* eslint-disable no-new */
         new Popper(
           targetElement,
-          this.$refs['v-step'+this.step.target],
+          this.$refs['v-step-' + this.hash],
           this.params
         )
       } else {
