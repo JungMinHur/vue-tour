@@ -1,5 +1,5 @@
 <template>
-  <div class="v-step" :id="'v-step'+step.target" :ref="'v-step'+step.target">
+  <div class="v-step" :id="'v-step-'+step.target" :ref="'v-step-'+step.target">
     <slot name="header">
       <div v-if="step.header" class="v-step__header">
         <div v-if="step.header.title" v-html="step.header.title"></div>
