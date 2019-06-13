@@ -72,7 +72,6 @@ export default {
   },
   watch: {
     name(newValue) {
-      console.log('this is newValue', newValue)
       this.$tour[newValue] = this
     }
   },

@@ -1,5 +1,5 @@
 <template>
-  <div class="v-step" :id="'v-step-' + hash" :ref="'v-step-' + hash">
+  <div class="v-step" :id="'v-step-' + step.target.join()" :ref="'v-step-' + step.target.join()">
     <slot name="header">
       <div v-if="step.header" class="v-step__header">
         <div v-if="step.header.title" v-html="step.header.title"></div>
@@ -97,7 +97,7 @@ export default {
         /* eslint-disable no-new */
         new Popper(
           targetElement,
-          this.$refs['v-step-' + this.hash],
+          this.$refs['v-step-' + this.step.target.join()],
           this.params
         )
       } else {
