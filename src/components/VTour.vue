@@ -60,6 +60,7 @@ export default {
   },
   mounted () {
     this.$tours[this.name] = this
+
     if (this.customOptions.useKeyboardNavigation) {
       window.addEventListener('keyup', this.handleKeyup)
     }
@@ -68,11 +69,6 @@ export default {
     // Remove the keyup listener if it has been defined
     if (this.customOptions.useKeyboardNavigation) {
       window.removeEventListener('keyup', this.handleKeyup)
-    }
-  },
-  watch: {
-    name(newValue) {
-      this.$tour[newValue] = this
     }
   },
   computed: {
